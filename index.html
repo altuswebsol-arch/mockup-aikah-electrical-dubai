@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aikah Electrical | Electrical Contracting — Dubai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0B0B0D; --coal:#121215; --steel:#1A1A1F;
+  --amber:#FFB224; --amber-dk:#D98F0A; --amber-glow:rgba(255,178,36,.16);
+  --white:#F5F3EE; --gray:#A7A39A; --gray-dk:#6B6860;
+  --line:rgba(255,178,36,.22);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Work Sans",-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--black);color:var(--white);line-height:1.7;font-weight:400;overflow-x:hidden}
+h1,h2,h3{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes boltflicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.4}94%{opacity:1}96%{opacity:.6}97%{opacity:1}}
+.rise{animation:rise .85s cubic-bezier(.2,.7,.2,1) both}
+.r1{animation-delay:.08s}.r2{animation-delay:.18s}.r3{animation-delay:.3s}
+.wrap{max-width:1280px;margin:0 auto;padding:0 32px}
+/* ---------- hazard strip ---------- */
+.hazard{background:repeating-linear-gradient(-45deg,var(--amber) 0 26px,#0B0B0D 26px 52px);height:14px}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,13,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:18px;padding-bottom:18px}
+.logo{font-family:"Oswald",sans-serif;font-weight:700;font-size:26px;letter-spacing:.06em}
+.logo .bolt{color:var(--amber);animation:boltflicker 4s infinite}
+.navlinks{display:flex;gap:32px;align-items:center}
+.navlinks a{font-family:"Oswald",sans-serif;font-size:14px;font-weight:500;letter-spacing:2.4px;text-transform:uppercase;color:var(--gray)}
+.navlinks a:hover{color:var(--amber)}
+.btn{display:inline-block;padding:16px 40px;font-family:"Oswald",sans-serif;font-size:15px;font-weight:600;letter-spacing:2.4px;text-transform:uppercase;transition:.28s;cursor:pointer;border:none}
+.btn-amber{background:var(--amber);color:#14100a;box-shadow:0 0 34px var(--amber-glow)}
+.btn-amber:hover{background:#fff;transform:translateY(-2px);box-shadow:0 0 50px rgba(255,178,36,.35)}
+.btn-ghost{background:transparent;color:var(--white);border:2px solid var(--line)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+.btn-sm{padding:12px 28px;font-size:13px}
+/* ---------- hero : full-bleed dramatic ---------- */
+.hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.55) 0%,rgba(11,11,13,.25) 40%,rgba(11,11,13,.94) 100%),linear-gradient(90deg,rgba(11,11,13,.7),transparent 60%)}
+.hero-inner{position:relative;z-index:2;width:100%;padding-bottom:110px}
+.live{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--line);background:rgba(11,11,13,.6);backdrop-filter:blur(8px);padding:10px 22px;font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:30px}
+.live .pulse{width:10px;height:10px;border-radius:50%;background:var(--amber);animation:pulse 1.6s infinite}
+.hero h1{font-size:clamp(52px,9vw,128px);line-height:.98;margin-bottom:26px}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--amber)}
+.hero p.lead{font-size:19px;color:#D8D4CA;max-width:560px;margin-bottom:44px;font-weight:300}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:60px}
+.hero-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);background:rgba(11,11,13,.55);backdrop-filter:blur(10px);max-width:860px}
+.hero-specs div{padding:26px 32px;border-left:1px solid var(--line)}
+.hero-specs div:first-child{border-left:none}
+.hero-specs b{font-family:"Oswald",sans-serif;font-size:19px;letter-spacing:1.5px;text-transform:uppercase;display:block;color:var(--amber);margin-bottom:6px}
+.hero-specs span{color:var(--gray);font-size:14px}
+/* ---------- ticker ---------- */
+.ticker{background:var(--amber);color:#14100a;overflow:hidden;white-space:nowrap;padding:16px 0}
+.ticker span{display:inline-block;font-family:"Oswald",sans-serif;font-weight:600;font-size:17px;letter-spacing:2.5px;text-transform:uppercase;padding:0 30px}
+/* ---------- sections ---------- */
+section{padding:110px 0}
+.sec-head{margin-bottom:64px;max-width:760px}
+.kicker{color:var(--amber);font-family:"Oswald",sans-serif;font-size:14px;font-weight:600;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:14px}
+.kicker::before{content:"";width:44px;height:3px;background:var(--amber)}
+.sec-head h2{font-size:clamp(36px,5vw,64px);line-height:1.04;margin-bottom:18px}
+.sec-head h2 .stroke{color:transparent;-webkit-text-stroke:1.5px var(--amber)}
+.sec-head p{color:var(--gray);font-size:17.5px}
+/* services : dark plates */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{background:var(--coal);border:1px solid rgba(255,255,255,.07);border-bottom:4px solid var(--amber);padding:46px 38px;transition:.3s;position:relative;overflow:hidden}
+.svc::before{content:"";position:absolute;top:0;right:0;width:120px;height:120px;background:radial-gradient(circle at top right,var(--amber-glow),transparent 70%);opacity:0;transition:.3s}
+.svc:hover{transform:translateY(-6px);border-color:var(--line)}
+.svc:hover::before{opacity:1}
+.svc .volt{font-family:"Oswald",sans-serif;font-size:15px;font-weight:600;letter-spacing:3px;color:var(--amber);margin-bottom:18px}
+.svc h3{font-size:24px;margin-bottom:14px}
+.svc p{color:var(--gray);font-size:15px}
+.svc ul{margin-top:20px}
+.svc li{list-style:none;color:#C9C5BB;font-size:14.5px;padding:6px 0 6px 24px;position:relative}
+.svc li::before{content:"▸";position:absolute;left:0;color:var(--amber)}
+/* ---------- feature : image + copy ---------- */
+.feature{background:var(--coal);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
+.feat-copy{padding:100px 80px 100px 0}
+.feat-copy h2{font-size:clamp(32px,4.2vw,56px);line-height:1.06;margin:20px 0 24px}
+.feat-copy h2 .stroke{color:transparent;-webkit-text-stroke:1.5px var(--amber)}
+.feat-copy>p{color:var(--gray);font-size:17px;margin-bottom:16px}
+.crew{margin:36px 0 42px}
+.crew li{list-style:none;display:flex;gap:20px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.08);align-items:flex-start}
+.crew .ic{width:54px;height:54px;flex:0 0 54px;background:var(--amber-glow);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:22px;font-family:"Oswald",sans-serif;font-weight:700}
+.crew b{font-family:"Oswald",sans-serif;font-size:17px;letter-spacing:1.6px;text-transform:uppercase;display:block;margin-bottom:4px}
+.crew span{color:var(--gray);font-size:15px}
+.feat-img{position:relative;min-height:560px}
+.feat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.feat-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--coal),transparent 35%)}
+.feat-badge{position:absolute;z-index:2;bottom:40px;left:40px;background:var(--amber);color:#14100a;padding:22px 30px;font-family:"Oswald",sans-serif;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;font-size:15px;max-width:280px;line-height:1.5}
+/* ---------- sectors ---------- */
+.sectors{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sector{position:relative;height:340px;overflow:hidden;border:1px solid rgba(255,255,255,.07)}
+.sector img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s;filter:grayscale(35%) brightness(.75)}
+.sector:hover img{transform:scale(1.07);filter:grayscale(0%) brightness(.9)}
+.sector .lab{position:absolute;left:0;right:0;bottom:0;padding:26px;background:linear-gradient(0deg,rgba(11,11,13,.95),transparent)}
+.sector .lab b{font-family:"Oswald",sans-serif;font-size:20px;letter-spacing:1.8px;text-transform:uppercase;display:block}
+.sector .lab span{color:var(--amber);font-size:13px;letter-spacing:1.6px;text-transform:uppercase}
+/* ---------- cta ---------- */
+.cta{background:radial-gradient(900px 480px at 50% 0%,var(--amber-glow),transparent 65%),var(--black);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.cta h2{font-size:clamp(40px,6vw,84px);line-height:1;margin-bottom:22px}
+.cta h2 .stroke{color:transparent;-webkit-text-stroke:2px var(--amber)}
+.cta p{color:var(--gray);font-size:18px;max-width:600px;margin:0 auto 44px}
+.bigphone{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(36px,5vw,64px);letter-spacing:.03em;display:block;margin-bottom:44px;color:var(--white)}
+.bigphone:hover{color:var(--amber)}
+/* ---------- contact ---------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.cinfo h3{font-size:30px;margin-bottom:10px}
+.cinfo>p{color:var(--gray);margin-bottom:30px}
+.crow{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.crow .ic{width:52px;height:52px;flex:0 0 52px;background:var(--amber-glow);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--amber);font-size:19px;font-family:"Oswald",sans-serif;font-weight:700}
+.crow b{display:block;font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:2.4px;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
+.crow span{color:#D8D4CA;font-size:16.5px}
+.form{background:var(--coal);border:1px solid rgba(255,255,255,.08);border-top:4px solid var(--amber);padding:48px 44px}
+.form h3{font-size:28px;margin-bottom:8px}
+.form p{color:var(--gray);font-size:15px;margin-bottom:28px}
+.form input,.form textarea,.form select{width:100%;padding:16px 18px;background:var(--black);border:1px solid rgba(255,255,255,.1);color:#fff;font-size:16px;margin-bottom:15px;font-family:inherit}
+.form input:focus,.form textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px var(--amber-glow)}
+.form input::placeholder,.form textarea::placeholder{color:var(--gray-dk)}
+.form button{width:100%}
+/* ---------- footer ---------- */
+footer{background:#060607;border-top:1px solid var(--line);padding:66px 0 0}
+footer .wrap{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.flogo{font-family:"Oswald",sans-serif;font-size:26px;font-weight:700;letter-spacing:.06em}
+.flogo .bolt{color:var(--amber)}
+.fline{color:var(--gray-dk);font-size:14px;margin-top:10px;max-width:420px}
+.copy{color:var(--gray-dk);font-size:13px}
+.gallery-credit{margin-top:50px;border-top:1px solid var(--line);padding:26px 0;text-align:center;background:rgba(255,178,36,.04)}
+.gallery-credit .badge{display:inline-block;border:1px solid var(--amber);padding:11px 30px;font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--amber)}
+.gallery-credit p{color:var(--gray-dk);font-size:13px;margin-top:14px;max-width:660px;margin-left:auto;margin-right:auto}
+.gallery-credit a{color:var(--amber)}
+@media(max-width:1020px){.feat-grid,.contact-grid{grid-template-columns:1fr}.feat-img{min-height:400px}.feat-copy{padding:70px 0}.svc-grid{grid-template-columns:1fr 1fr}.sectors{grid-template-columns:1fr 1fr}.navlinks a:not(.btn){display:none}.hero-specs{grid-template-columns:1fr}.hero-specs div{border-left:none;border-top:1px solid var(--line)}.hero-specs div:first-child{border-top:none}}
+@media(max-width:620px){.svc-grid,.sectors{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="hazard"></div>
+
+<nav class="nav"><div class="wrap">
+  <div class="logo">AIKAH <span class="bolt">⚡</span> ELECTRICAL</div>
+  <div class="navlinks">
+    <a href="#services">Services</a><a href="#capability">Capability</a><a href="#sectors">Sectors</a><a href="#contact">Contact</a>
+    <a class="btn btn-amber btn-sm" href="tel:+97143146320">Get a Quote</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <div class="hero-bg"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1800&q=80&auto=format&fit=crop" alt="Electrician at work"></div>
+  <div class="hero-inner"><div class="wrap">
+    <div class="live rise"><span class="pulse"></span> Electrical Contracting · Dubai</div>
+    <h1 class="rise r1">Power, wired<br><span class="stroke">to perfection.</span></h1>
+    <p class="lead rise r2">Commercial and residential electrical contracting across Dubai — installations, fit-outs and maintenance from a licensed, safety-first team.</p>
+    <div class="hero-cta rise r3">
+      <a class="btn btn-amber" href="tel:+97143146320">+971 4 314 6320</a>
+      <a class="btn btn-ghost" href="#contact">Request a Quote</a>
+    </div>
+    <div class="hero-specs rise r3">
+      <div><b>Contracting</b><span>New installations &amp; fit-outs</span></div>
+      <div><b>Maintenance</b><span>Planned &amp; reactive callouts</span></div>
+      <div><b>Dubai Based</b><span>Serving the emirate</span></div>
+    </div>
+  </div></div>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <span>⚡ Installations</span><span>⚡ Fit-Outs</span><span>⚡ Maintenance</span><span>⚡ Testing &amp; Inspection</span><span>⚡ Emergency Callouts</span><span>⚡ Installations</span><span>⚡ Fit-Outs</span><span>⚡ Maintenance</span><span>⚡ Testing &amp; Inspection</span><span>⚡ Emergency Callouts</span>
+</div>
+
+<section id="services"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">What we do</div>
+    <h2>Full-scope electrical, <span class="stroke">done right.</span></h2>
+    <p>From distribution boards to decorative lighting — specified, installed and certified properly.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc"><div class="volt">/ 01</div><h3>Installations</h3><p>Complete electrical installations for new builds and refurbishments.</p><ul><li>Wiring &amp; distribution boards</li><li>Lighting design &amp; install</li><li>Power &amp; data points</li></ul></div>
+    <div class="svc"><div class="volt">/ 02</div><h3>Fit-Outs</h3><p>Office, retail and villa fit-out electrics delivered on programme.</p><ul><li>Commercial fit-outs</li><li>Shop &amp; restaurant power</li><li>Smart controls</li></ul></div>
+    <div class="svc"><div class="volt">/ 03</div><h3>Maintenance</h3><p>Planned servicing and rapid reactive response across Dubai.</p><ul><li>AMC contracts</li><li>Fault finding</li><li>Emergency callouts</li></ul></div>
+    <div class="svc"><div class="volt">/ 04</div><h3>Testing &amp; Inspection</h3><p>Certification and condition reports for compliance and peace of mind.</p><ul><li>Periodic inspection</li><li>Load assessments</li><li>Safety certification</li></ul></div>
+    <div class="svc"><div class="volt">/ 05</div><h3>Lighting</h3><p>Architectural and landscape lighting that transforms spaces after dark.</p><ul><li>Facade lighting</li><li>Garden &amp; pool</li><li>LED retrofits</li></ul></div>
+    <div class="svc"><div class="volt">/ 06</div><h3>Power Upgrades</h3><p>Capacity upgrades and load balancing for growing demands.</p><ul><li>DB upgrades</li><li>Three-phase works</li><li>EV charging points</li></ul></div>
+  </div>
+</div></section>
+
+<section id="capability" class="feature"><div class="wrap">
+  <div class="feat-grid">
+    <div class="feat-copy">
+      <div class="kicker">Capability</div>
+      <h2>Safety isn't a slogan. <span class="stroke">It's the method.</span></h2>
+      <p>Every job is risk-assessed, isolated, tested and documented. Our engineers work to international wiring standards with calibrated test equipment.</p>
+      <ul class="crew">
+        <li><div class="ic">S</div><div><b>Licensed Team</b><span>Qualified electricians, supervised and insured.</span></div></li>
+        <li><div class="ic">T</div><div><b>Tested &amp; Certified</b><span>Documented test results on completion.</span></div></li>
+        <li><div class="ic">R</div><div><b>Rapid Response</b><span>Emergency callouts across Dubai.</span></div></li>
+      </ul>
+      <a class="btn btn-amber" href="#contact">Discuss Your Project</a>
+    </div>
+    <div class="feat-img">
+      <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1200&q=80&auto=format&fit=crop" alt="Electrician installing equipment">
+      <div class="feat-badge">Licensed electrical contracting — Dubai, UAE</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="sectors"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Sectors</div>
+    <h2>Where we <span class="stroke">plug in.</span></h2>
+  </div>
+  <div class="sectors">
+    <div class="sector"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop" alt="Commercial building"><div class="lab"><b>Commercial</b><span>Offices &amp; retail</span></div></div>
+    <div class="sector"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format&fit=crop" alt="Residential villa"><div class="lab"><b>Residential</b><span>Villas &amp; apartments</span></div></div>
+    <div class="sector"><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80&auto=format&fit=crop" alt="Solar installation"><div class="lab"><b>Energy</b><span>Solar &amp; efficiency</span></div></div>
+    <div class="sector"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80&auto=format&fit=crop" alt="Lighting detail"><div class="lab"><b>Lighting</b><span>Design &amp; install</span></div></div>
+  </div>
+</div></section>
+
+<div class="cta"><section><div class="wrap">
+  <div class="kicker" style="justify-content:center">Get Connected</div>
+  <h2>Let's talk <span class="stroke">power.</span></h2>
+  <p>Call for a site visit and a clear, itemised quotation — no obligation.</p>
+  <a class="bigphone" href="tel:+97143146320">+971 4 314 6320</a>
+  <a class="btn btn-amber" href="#contact">Request a Quote</a>
+</div></section></div>
+
+<section id="contact"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker">Contact</div>
+    <h2>Switch <span class="stroke">us on.</span></h2>
+  </div>
+  <div class="contact-grid">
+    <div class="cinfo">
+      <h3>Contact details</h3>
+      <p>For projects, maintenance contracts and emergencies.</p>
+      <div class="crow"><div class="ic">✆</div><div><b>Phone</b><span><bdi>+971 4 314 6320</bdi></span></div></div>
+      <div class="crow"><div class="ic">✉</div><div><b>Email</b><span>info@aikah.com</span></div></div>
+      <div class="crow"><div class="ic">◈</div><div><b>Based in</b><span>Dubai, UAE</span></div></div>
+    </div>
+    <form class="form" onsubmit="return false">
+      <h3>Request a quote</h3>
+      <p>Describe the job and we'll arrange a site visit.</p>
+      <input placeholder="Your name" required>
+      <input placeholder="Phone number" type="tel" required>
+      <input placeholder="Email address" type="email">
+      <textarea rows="4" placeholder="What electrical work do you need?"></textarea>
+      <button class="btn btn-amber" type="submit">Send Request →</button>
+    </form>
+  </div>
+</div></section>
+
+<div class="hazard"></div>
+
+<footer><div class="wrap">
+  <div>
+    <div class="flogo">AIKAH <span class="bolt">⚡</span> ELECTRICAL</div>
+    <div class="fline">Electrical contracting, fit-outs &amp; maintenance — Dubai, UAE.</div>
+  </div>
+  <div class="copy">© 2026 Aikah Electrical. All rights reserved.</div>
+</div>
+<div class="gallery-credit"><div class="wrap">
+  <span class="badge">⚡ Concept by <a href="https://altuswebsolutions.com">Altus Web Solutions</a> ⚡</span>
+  <p>Free homepage concept crafted exclusively for Aikah Electrical. Your photos, logo and details slot straight in — <a href="https://altuswebsolutions.com">ask us</a> about the full website.</p>
+</div></div>
+</footer>
+
+</body>
+</html>
