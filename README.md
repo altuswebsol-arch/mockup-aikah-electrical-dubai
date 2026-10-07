@@ -1,5 +1,7 @@
 # Aikah Electrical Dubai — Website Mockup Concept
 
+**Live demo:** https://altuswebsol-arch.github.io/mockup-aikah-electrical-dubai/
+
 A homepage redesign concept for **Aikah Electrical Dubai** in Dubai, UAE — a electrical business.
 
 ## Design
